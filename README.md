@@ -4,7 +4,7 @@
 Instructions
 
 1. **Important** (Skip if you have done so in assignment 1) Tell us your github account at https://signin-apd27wnqlq-uw.a.run.app/sta141c/. This will allow us to fetch your assignments later. Failing to do so will result in a zero grade of the assignments.
-1. Accept the assignment via the link:
+1. Accept the assignment via the link: https://classroom.github.com/a/CMTBl9Rd
 1. A repo containing your username `sta141c-assignment-n-USERNAME` will be created.<br>
     The assignment will be created at https://github.com/ucdavis-sta141c-2021-winter
 1. Create a new RStudio project with the repo containing your username  (do not clone the template repo `sta141c-assignment-n`)
@@ -19,4 +19,4 @@ Visit https://happygitwithr.com/ for tutorials.
 
 
 Points: 5% of the course grade.
-Due Date: 1/10/2021 11:59 pm
+Due Date: 1/24/2021 11:59 pm
