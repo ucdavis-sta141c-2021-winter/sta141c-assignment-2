@@ -1,0 +1,45 @@
+---
+title: "Question 1"
+---
+
+
+```{r, message = FALSE}
+library(tidyverse)
+```
+
+You are required to use the functional programming approach to solve the following problems.
+
+
+First we prepare some files to work with.
+The `walk` function is very similar to the `map` function except that it doesn't return values.
+
+
+```{r}
+dir.create("files", showWarnings = FALSE)
+set.seed(141)
+1:100 %>% walk(function(i) {
+    dt <- tibble(x = rnorm(10), y = rnorm(10))
+    write_csv(dt, file.path("files", sprintf("file%02d.csv", i)))
+})
+```
+
+##### (a) Read the csv files using `Sys.glob("files/*")`, `map` and `read_csv`. Save the result as `ll`.
+
+Remark: to suppress messages from running `read_csv`, consider `col_types = "dd"`.
+
+
+
+
+##### (b) Use `ll` and `map_dbl` to compute 20% trimmed mean of the variable `x` for each dataset (Don't print the answers!)
+
+
+##### (c) Use `ll` `map` and `t.test` to run a t test to check the equality of `mean(x)` and `mean(y)` for each file. (Don't print the answers!)
+
+
+
+##### (d) Extract the $p$-values in part(c) and plot a histogram of the $p$-values. What shape the distribution is it?
+
+
+
+##### (e) We want to make sure that `mean(x)` must be less than `mean(y)` by swapping the values of `x` and `y` if `mean(y) <= mean(x).` Use `map_if` to perform this operation.
+
